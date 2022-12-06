@@ -1,0 +1,6 @@
+TypeScript是JS的超集, JS拥有的, TS都有
+是在JS基础上添加了类型支持得到的静态类型检查的弱类型语言, 由微软开发, 同JS运行环境一致
+
+let age1: number = 18
+// number类型
+

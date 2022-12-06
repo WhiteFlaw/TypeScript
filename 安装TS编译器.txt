@@ -1,0 +1,7 @@
+Node环境和浏览器环境都无法识别TS, TS需要转换为JS才能被解析
+
+npm i -g typescript
+
+tsc命令实现TS => JS
+
+tsc -v 检查TS编译器版本
