@@ -1,0 +1,33 @@
+# 一、形式参数
+
+##1. 返回值与形式参数
+形式参数即函数括号内的待传入占位参数, 也需要逐个规定类型, 有点像Vue的Props, 如果类型不符不支持传入.
+
+一个函数的类型由其返回值决定, 在其返回值的类型确定时应当在参数括号后, 大括号前使用冒号规定该函数的类型.
+```typescript
+let add2 = (params1: Number, params2: Number): Number => {
+  return params1 + params2;
+}
+```
+
+但当一个函数的返回值类型无法确定时, 如:
+```typescript
+
+```
+
+当一个函数没有明确返回值时, 如:
+```typescript
+let add2 = (params1: Number, params2: String): void => {
+  console.log(params1 + Number(params2));
+}
+```
+应规定为void类型, 表示没有任何类型
+
+## 1. 可选参数
+可选参数应该在类型规定的冒号前加一个'?'表示其可选, 考虑到可选参数可以不传, 放在其他参数之间会影响对其他参数传参的准确性, 应该放在所有必传参数的后面, 这也是规定.
+```typescript
+function optionalParams(x: Number, y: (Number | String)[], z?:Number):  {
+  console.log(x + z); 
+  return y
+}
+```
