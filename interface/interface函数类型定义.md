@@ -1,9 +1,10 @@
-同使用interface定义对象类型, interface也可以为函数自定义类型, 使用该自定义类型的函数也应当描述为interface中所定义的格式.
+与使用interface定义对象类型相似, interface也可以为函数自定义类型, 使用该自定义类型的函数也应当描述为interface中所定义的格式.
 
 定义接口(自定义函数类型)`aSum`.
 ```typescript
 interface aSum {
   (x: number, y: number): number
+  // (参数1: 参数类型, 参数2: 参数类型): 函数返回值类型
 }
 ```
 
