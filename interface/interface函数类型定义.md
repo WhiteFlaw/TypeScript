@@ -22,7 +22,7 @@ type aSum = (x: number, y: number): number
 ```
 
 使用aSum类型定义函数:
-```tyepscript
+```typescript
 const add: aSum = (num1, num2) => {
   return num1 + num2
 }
@@ -64,7 +64,7 @@ lib.doSomeThing = () => {}
 ```
 
 以下实现混合接口Lib的方式报错: 
-```typscript
+```typescript
 interface Lib {
   (): void;
   version: String;
