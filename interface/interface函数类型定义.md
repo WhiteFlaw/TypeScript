@@ -51,7 +51,7 @@ console.log('累加', calcArr(arr, add, 0))
 
 # 为何使用interface而非类型别名type
 一个接口中不仅可以定义函数, 接口可以拥有自己的属性和方法.
-```typscript
+```typescript
 interface Lib {
   (): void;
   version: String;
@@ -64,7 +64,6 @@ lib.doSomeThing = () => {}
 ```
 
 以下实现混合接口Lib的方式报错: 
-```typescript
 ```typscript
 interface Lib {
   (): void;
@@ -76,7 +75,4 @@ let lib: Lib = () => {}
 lib.version = '1.0'
 lib.doSomeThing = () => {}
 ```
-```
 类型“() => void”缺少类型“Lib”中的以下属性: version, doSomeThing
-```
-```
