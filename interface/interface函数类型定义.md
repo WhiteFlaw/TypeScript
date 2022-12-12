@@ -27,6 +27,27 @@ const add: aSum = (num1, num2) => {
 }
 ```
 
+使用例:
+```typescript
+interface calcTwo {
+  (a: Number, b: Number) : Number
+}
+
+const add = function (a: number, b: number): number {
+  return a + b;
+}
+
+function calcArr(arr: number[], calc: calcTwo, defaultVal: number) {
+  for (let i = 0; i < arr.length; i++) {
+    defaultVal += arr[i];
+  }
+  return defaultVal
+}
+
+const arr: number[] = [2, 4, 6, 8, 10];
+console.log('累加', calcArr(arr, add, 0))
+```
+
 # 为何使用interface而非类型别名type
 一个接口中不仅可以定义函数, 接口可以拥有自己的属性和方法.
 ```typscript
