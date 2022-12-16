@@ -76,7 +76,7 @@ interface NotOkey2 { // 标红
 "数字索引的返回值必须是字符串索引返回值类型的子类型", 我不明白为什么会有这种奇怪的约定.
 找后端大哥问了下, 这只是约定中的一个例子, 完整约定举例, 如果使用一个子类all继承父类part, 那么子类的索引类型应当为父类索引类型的子类型, 而interface中只能使用String或者Number类型值作为索引
 所以"如果索引返回值存在父子关系, 那么子返回值的索引应当为Number类型, 父返回值的索引应当为String类型."
-
+/////然后呢???意思是number是string的子类型???
 ```typescript
 class Animal {
   name: 'abc';
