@@ -77,7 +77,6 @@ interface NotOkey2 { // 标红
 找后端大哥问了下, 这只是约定中的一个例子, 完整约定举例, 如果使用一个子类all继承父类part, 那么子类的索引类型应当被包含于为父类索引类型, 而interface中只能使用String或者Number类型值作为索引, Number必能转为String, 但是String不能转为Number, 并且前面提到指明用于查询的索引若为Number那么将先转为String再查询, 是否可以近似的看作Number被包含于String.
 
 所以"如果索引返回值存在父子关系, 那么子返回值的索引应当为Number类型, 父返回值的索引应当为String类型."
-/////然后呢???意思是number是string的子类型???
 ```typescript
 class Animal {
   name: 'abc';
