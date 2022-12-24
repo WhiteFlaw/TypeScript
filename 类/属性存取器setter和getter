@@ -1,0 +1,22 @@
+考虑到安全性, 不应允许类中重要的属性被随意修改, 在JavaScript中会设置专门的getter和setter方法对重要属性进行修改, 参考Vue中setter和getter.
+```JavaScript
+class Person {
+  private name: string
+  public constructor(name: string) {
+    this.name = name
+  }
+  get getName() {
+    console.log('get name');
+    return this.name;
+  }
+  set setName(val:string) {
+    this.name = val;
+  }
+}
+
+const p2 = new Person('player_1');
+p2.setName = '2'
+console.log(p2.getName); // '2'
+```
+
+name被设置为private私有属性无法在类外直接访问, 但可以通过get和set关键字声明的getter和setter访问.
